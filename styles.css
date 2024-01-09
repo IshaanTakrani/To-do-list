@@ -1,0 +1,27 @@
+div {
+    border: 2px red;
+}
+
+
+.big-text {
+    font-size: 0.5em;
+}
+
+.new-class {
+    color: red;
+}
+
+.new-class-2 {
+    color: darkorange;
+}
+
+
+.item-text {
+    color: red;
+}
+
+.item-div {
+    display: flex;
+
+    /* flex-direction: row; */
+}
