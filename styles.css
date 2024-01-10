@@ -92,7 +92,7 @@
 
 .remove:hover,
 .strike-btn:hover {
-    background-color: lightgray;
+    background-color: rgb(136, 136, 136);
 }
 
 .remove-dark:hover,
@@ -126,13 +126,37 @@
     align-items: center;
 }
 
+.foot {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: end;
+    padding: 30px;
+    padding-right: 35px;
+    align-items: center;
+}
+
+
+.dark-mode-btn {
+    background: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    filter: invert(0%) sepia(9%) saturate(7465%) hue-rotate(340deg) brightness(109%) contrast(97%);
+}
+
+.dark-mode-btn img {
+    width: 75%;
+}
 
 body {
     margin: 20px;
     padding: 20px;
     font-family: sans-serif;
 
-    background-color: #ffffff;
+    background: #ffffff;
     transition: 0.5s;
     /* text colour, title colour */
 }
