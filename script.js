@@ -1,6 +1,7 @@
-let input = document.querySelector(".input");
+const input = document.querySelector(".input");
 const addBtn = document.querySelector(".add");
 const items = document.querySelector(".todo-container");
+const darkModeBtn = document.querySelector(".dark-mode-btn");
 
 function changeToStrikethrough(item) {
   if (
@@ -12,6 +13,64 @@ function changeToStrikethrough(item) {
   } else {
     item.querySelector(".item-text").style.textDecoration = "line-through";
     item.querySelector(".item-text").style.opacity = "0.65";
+  }
+}
+
+function changeColourMode() {
+  if ((document.body.background = "white")) {
+    document.body.style.background = "black";
+    document.querySelector(".title").style.color = "white";
+    const itemTexts = Array.from(document.getElementsByClassName("item-text"));
+    const itemRemoveBtns = Array.from(
+      document.getElementsByClassName("remove")
+    );
+    const itemStrikeBtns = Array.from(
+      document.getElementsByClassName("strike-btn")
+    );
+
+    const itemCount = itemTexts.length;
+
+    for (let i = 0; i < itemCount; i++) {
+      console.log(itemTexts[i].innerHTML);
+      itemTexts[i].style.color = "white";
+    }
+
+    for (let i = 0; i < itemCount; i++) {
+      console.log(itemRemoveBtns[i].innerHTML);
+      itemRemoveBtns[i].setAttribute("class", "remove-dark");
+    }
+
+    for (let i = 0; i < itemCount; i++) {
+      console.log(itemStrikeBtns[i].innerHTML);
+      itemStrikeBtns[i].setAttribute("class", "strike-btn-dark");
+    }
+  } else {
+    document.body.style.background = "white";
+    document.querySelector(".title").style.color = "black";
+    const itemTexts = Array.from(document.getElementsByClassName("item-text"));
+    const itemRemoveBtns = Array.from(
+      document.getElementsByClassName("remove")
+    );
+    const itemStrikeBtns = Array.from(
+      document.getElementsByClassName("strike-btn")
+    );
+
+    const itemCount = itemTexts.length;
+
+    for (let i = 0; i < itemCount; i++) {
+      console.log(itemTexts[i].innerHTML);
+      itemTexts[i].style.color = "black";
+    }
+
+    for (let i = 0; i < itemCount; i++) {
+      console.log(itemRemoveBtns[i].innerHTML);
+      itemRemoveBtns[i].setAttribute("class", "remove");
+    }
+
+    for (let i = 0; i < itemCount; i++) {
+      console.log(itemStrikeBtns[i].innerHTML);
+      itemStrikeBtns[i].setAttribute("class", "strike-btn");
+    }
   }
 }
 
@@ -63,3 +122,5 @@ input.addEventListener("keypress", (e) => {
     addItem();
   }
 });
+
+darkModeBtn.addEventListener("click", changeColourMode);
