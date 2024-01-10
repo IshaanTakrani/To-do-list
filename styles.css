@@ -1,27 +1,107 @@
-div {
-    border: 2px red;
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
-
-.big-text {
-    font-size: 0.5em;
+.content-holder {
+    display: flex;
+    flex-direction: column;
 }
 
-.new-class {
-    color: red;
+.input-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.new-class-2 {
-    color: darkorange;
+.input {
+    padding-left: 20px;
+    margin: 20px;
+    margin-right: 0px;
+    height: 50px;
+    width: 25%;
+    border-radius: 50px 0px 0px 50px;
+    background-color: lightgray;
+    border: none;
+    outline: none;
+    font-size: 1.25em;
+    transition: 0.3s;
 }
 
+.input:hover {
+    background-color: rgb(181, 181, 181);
+}
+
+.add {
+    padding-top: 2px;
+    margin: 20px;
+    margin-left: 0px;
+    height: 52px;
+    margin-right: 52px;
+    width: 52px;
+    border-radius: 0px 50px 50px 0px;
+    border: none;
+    background-color: lightgray;
+    transition: 0.3s;
+}
+
+.add:hover {
+    background-color: rgb(181, 181, 181);
+}
+
+.remove,
+.strike-btn {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    /* padding-top: 4.5%; */
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.remove:hover,
+.strike-btn:hover {
+    background-color: lightgray;
+}
 
 .item-text {
-    color: red;
+    font-size: 1.25em;
+    transition: 0.3s;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 
 .item-div {
     display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    width: 50%;
+}
 
-    /* flex-direction: row; */
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    margin: 20px;
+    padding: 20px;
+    font-family: sans-serif;
 }
