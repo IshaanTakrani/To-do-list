@@ -40,7 +40,8 @@
 }
 
 .input:hover {
-    background-color: rgb(181, 181, 181);
+    /* background-color: rgb(181, 181, 181); */
+    background-color: rgb(194, 194, 194);
 }
 
 .add {
@@ -114,7 +115,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 100%;
 }
 
 .item-div {
