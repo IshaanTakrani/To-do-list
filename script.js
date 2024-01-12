@@ -4,7 +4,6 @@ const items = document.querySelector(".todo-container");
 const darkModeBtn = document.querySelector(".dark-mode-btn");
 
 let isDark = false;
-// const lightModeBtn = document.querySelector(".light-mode-btn");
 
 function changeToStrikethrough(item) {
   if (
